@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: 'Anek Tamil', serif, sans-serif, Helvetica;
+    font-weight: 300;
+    font-size: 16px;
+    color: rgb(10, 10, 10);
+}
+body {
+    background-color: rgb(210, 210, 210);
+}
+h1 {
+    font-size: 2rem;
+}
+h2 {
+    font-size: 1.5rem;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+li {
+    list-style: none;
+    color: white;
+}
+
+/***********/
+
+/* HEADER */
+header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    z-index: 1000;
+}
+/* MAIN */
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 10px;
+}
+.espaciador {
+    background-color: rgba(10, 10, 10, 0.5);
+    width: 100%;
+    max-width: 1920px;
+    height: 2px;
+    margin: 30px 0 ;
+}
+/***********************/
+.cont_header {
+    background-color: rgb(200, 200, 200);
+    width: 100%;
+    max-width: 1920px;
+    height: 70px;
+    position: relative;
+    z-index: 900;
+    transition: .5s ease-in-out;
+}
+
+/* Logo y Boton de menu */
+.logo_menu {
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    position: absolute;
+    z-index: 901;
+}
+#logo_header {
+    width: 60px;
+}
+
+.menu_header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center;
+    opacity: 0;
+    transition: .3s ease-in-out;
+    position: absolute;
+    z-index: 899;
+}
+.menu_header li {
+    opacity: 0;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: .3s;
+}
+
+/* Se activa el menu (mobile) */
+.menu_activo {
+    opacity: 100%;
+    transition: .5s ease-in-out; 
+}
+.menu_activo li {
+    transition: 1s ease-in-out;
+    opacity: 100%;
+}
+.cont_header_activo {
+    height: 100vh;
+    transition: .5s ease-in-out;
+}
+/*******/
+
+
+.inicio,
+.sobre_mi,
+.proyectos,
+.contacto {
+    width: 100%;
+    max-width: 1920px;
+    margin: 30px 0;
+}
+
+/* INICIO */
+.foto_perfil {
+    background: linear-gradient(rgb(40, 80, 129, 0.90) 50%, rgba(0, 0, 0, 1) 100%) ;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 50%;
+    border-top-left-radius: 35%;
+    border-top-right-radius: 35%;
+    padding-top: 15px;
+    margin: 30px 0;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.foto_perfil img {
+    width: 100%;
+    margin-bottom: -4px;
+    opacity: 90%;
+}
+.inicio > h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgb(40, 80, 129);
+}
+.inicio > h2 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.inicio > p {
+    font-size: 1rem;
+}
+.btn_inicio {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px 0;
+}
+.btn_inicio a {
+    background-color: rgb(40, 80, 129);
+    padding: 8px 16px;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-weight: 300;
+}
+
+.redes_inicio {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.redes_inicio a{
+    font-size: 1.5rem;
+    margin-right: 20px;
+    color: rgb(10, 10, 10);
+    transition: .3s ease-in-out;
+}
+.redes_inicio a:hover {
+    transform: scale(1.25);
+}
+/*********************************/
+
+/* SOBRE MI */
+.sobre_mi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sobre_mi > h1 {
+    width: 100%;
+    text-align: start;
+    margin-bottom: 5px;
+}
+.lucas p {
+    margin-bottom: 30px;
+}
+.tecnologias h2 {
+    margin-bottom: 5px;
+}
+.tecnologias ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.tecnologias ul li {
+    background-color: rgb(40, 80, 129);
+    margin: 5px;
+    padding: 4px 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.tecnologias ul li i {
+    margin-right: 5px;
+    font-size: 1.05rem;
+}
+
+
+
+
