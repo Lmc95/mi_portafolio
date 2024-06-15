@@ -19,14 +19,14 @@
     <header>
         <nav class="cont_header">
             <div class="logo_menu">
-                <img src="/assets/imagenes/logos/logo_lmc.png" alt="" id="logo_header">
-                <button id="btn_menu" type="button">MENU</button>
+                <img src="/assets/imagenes/logo_lmc.png" alt="" id="logo_header">
+                <button id="btn_menu" type="button"><i id="btnM" class="fa-solid fa-bars"></i></button>
             </div>
             <ul class="menu_header">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Sobre Mí</a></li>
-                <li><a href="#">Proyectos</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="#" class="opcion_menu"><i class="fa-solid fa-house"></i>Inicio</a></li>
+                <li><a href="#" class="opcion_menu"><i class="fa-solid fa-circle-user"></i>Sobre Mí</a></li>
+                <li><a href="#proyectos" class="opcion_menu"><i class="fa-solid fa-briefcase"></i>Proyectos</a></li>
+                <li><a href="#" class="opcion_menu"><i class="fa-solid fa-phone"></i>Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -76,66 +76,104 @@
         <hr class="espaciador">
         
         <section class="proyectos">
-            <h1>Proyectos</h1>
+            <h1 id="proyectos">Proyectos</h1>
             <div class="proyectos_destacados">
                 <div class="carta_proyecto">
                     <div class="info_proyecto">
                         <h3>Título</h3><hr>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, praesentium.</p>
+                        <ul class="t_proyecto">
+                            <li><i class="fa-brands fa-html5" style="color: #E04E26;"></i></li>
+                            <li><i class="fa-brands fa-css3-alt" style="color: #275DE7;"></i></li>
+                            <li><i class="fa-brands fa-js" style="color: #EFD81D;"></i></li>
+                        </ul>
                     </div>
-                    <div class="t_proyecto">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JS</span>
-                    </div>
+                    
                     <div class="btn_proyecto">
-                        <a href="#">Ver Más</a>
-                    </div>
-                </div>
-
-
-
-                <div class="carta_proyecto">
-                    <div class="info_proyecto">
-                        <h3>Título</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, praesentium.</p>
-                    </div>
-                    <div class="t_proyecto">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JS</span>
-                    </div>
-                    <div class="btn_proyecto">
-                        <a href="#">Ver Más</a>
+                        <a href="#"><i class="fa-solid fa-play"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
                     </div>
                 </div>
                 <div class="carta_proyecto">
                     <div class="info_proyecto">
-                        <h3>Título</h3>
+                        <h3>Título</h3><hr>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, praesentium.</p>
+                        <ul class="t_proyecto">
+                            <li><i class="fa-brands fa-html5" style="color: #E04E26;"></i></li>
+                            <li><i class="fa-brands fa-css3-alt" style="color: #275DE7;"></i></li>
+                            <li><i class="fa-brands fa-js" style="color: #EFD81D;"></i></li>
+                        </ul>
                     </div>
-                    <div class="t_proyecto">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JS</span>
-                    </div>
+                    
                     <div class="btn_proyecto">
-                        <a href="#">Ver Más</a>
+                        <a href="#"><i class="fa-solid fa-play"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
                     </div>
                 </div>
-                <a href="#" class="mas_proyectos">Ver Más</a>
+                <div class="carta_proyecto">
+                    <div class="info_proyecto">
+                        <h3>Título</h3><hr>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, praesentium.</p>
+                        <ul class="t_proyecto">
+                            <li><i class="fa-brands fa-html5" style="color: #E04E26;"></i></li>
+                            <li><i class="fa-brands fa-css3-alt" style="color: #275DE7;"></i></li>
+                            <li><i class="fa-brands fa-js" style="color: #EFD81D;"></i></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="btn_proyecto">
+                        <a href="#" title="Ver Proyecto" class="demo"><i class="fa-solid fa-play"></i></a>
+                        <a href="#" title="Ver Código" class="codigo"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <!-- El boton Ver mas se habilitara (manualmente) cuando los proyectos sean mayor a tres -->
+                <!-- <a href="#" class="mas_proyectos">Ver Más</a> -->
             </div>
         </section>
 
         <hr class="espaciador">
         
         <section class="contacto">
-            <h1></h1>
+            <div class="cont_contacto">
+                <h2>Contactame</h2>
+                <div class="info_contacto">
+                    <div class="email">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:95lmcarranza@gmail.com">95lmcarranza@gmail.com</a>
+                    </div>
+                    <div class="tel">
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+54123456789">+54123456789</a>
+                    </div>
+                </div>
+                
+            </div>
         </section>
 
     </main>
 
-    <footer>Footer</footer>
+    <footer>
+        <div class="logo_redes">
+            <img src="/assets/imagenes/logo_lmc.png" alt="Logo LMC">
+            <div class="redes_footer">
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+                <a href="#"><i class="bi bi-github"></i></a>
+            </div>
+        </div>
+        <nav class="cont_footer">
+            <ul class="menu_footer">
+                <li><a href="#"><i class="fa-solid fa-house"></i>Inicio</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-user"></i>Sobre Mí</a></li>
+                <li><a href="#proyectos"><i class="fa-solid fa-briefcase"></i>Proyectos</a></li>
+                <li><a href="#"><i class="fa-solid fa-phone"></i>Contacto</a></li>
+            </ul>
+        </nav>
+        
+        <div class="mi_portafolio">
+            <img src="/assets/imagenes/logo_lmc.png" alt="Logo LMC" width="25px">
+            <span>Lucas M. Carranza.</span>
+        </div>
+    </footer>
 
     <script src="/js/main.js"></script>
 </body>

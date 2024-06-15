@@ -10,7 +10,7 @@ html {
     color: rgb(10, 10, 10);
 }
 body {
-    background-color: rgb(210, 210, 210);
+    background-color: rgb(230, 230, 230);
 }
 h1 {
     font-size: 2rem;
@@ -46,6 +46,8 @@ main {
     justify-content: flex-start;
     align-items: center;
     padding: 0 10px;
+    background: none;
+    backdrop-filter: blur(10px);
 }
 .espaciador {
     background-color: rgba(10, 10, 10, 0.5);
@@ -56,20 +58,20 @@ main {
 }
 /***********************/
 .cont_header {
-    background-color: rgb(200, 200, 200);
+    backdrop-filter: blur(35px);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 1920px;
     height: 70px;
-    position: relative;
+    position: fixed;
     z-index: 900;
-    transition: .5s ease-in-out;
+    transition: .3s ease-in-out;
 }
 
 /* Logo y Boton de menu */
 .logo_menu {
     width: 100%;
     height: 70px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -79,6 +81,12 @@ main {
 }
 #logo_header {
     width: 60px;
+}
+#btn_menu {
+    font-size: 1.5rem;
+    border: none;
+    background: none;
+    color: rgb(30, 30, 30);
 }
 
 .menu_header {
@@ -96,14 +104,26 @@ main {
 .menu_header li {
     opacity: 0;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     transition: .3s;
+}
+.menu_header li a {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.75);
+    transition: .3s ease-in-out;
+}
+.menu_header li i {
+    margin-right: 10px;
+}
+.menu_header li a:hover {
+    color: #137dc9;
 }
 
 /* Se activa el menu (mobile) */
 .menu_activo {
     opacity: 100%;
-    transition: .5s ease-in-out; 
+    transition: .3s ease-in-out; 
 }
 .menu_activo li {
     transition: 1s ease-in-out;
@@ -111,7 +131,7 @@ main {
 }
 .cont_header_activo {
     height: 100vh;
-    transition: .5s ease-in-out;
+    transition: .3s ease-in-out;
 }
 /*******/
 
@@ -127,15 +147,13 @@ main {
 
 /* INICIO */
 .foto_perfil {
-    background: linear-gradient(rgb(40, 80, 129, 0.90) 50%, rgba(0, 0, 0, 1) 100%) ;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(rgb(30, 90, 130, 0.90) 30%, rgba(0, 0, 0, 1) 100%) ;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     width: 150px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     border-radius: 50%;
-    border-top-left-radius: 35%;
-    border-top-right-radius: 35%;
     padding-top: 15px;
     margin: 30px 0;
     overflow: hidden;
@@ -152,7 +170,7 @@ main {
 .inicio > h1 {
     font-size: 1.5rem;
     font-weight: 700;
-    color: rgb(40, 80, 129);
+    color: rgb(50, 90, 130);
 }
 .inicio > h2 {
     font-size: 1.25rem;
@@ -175,7 +193,7 @@ main {
     margin: 20px 20px 20px 0;
 }
 .btn_inicio a {
-    background-color: rgb(40, 80, 129);
+    background-color: rgb(50, 90, 130);;
     padding: 8px 16px;
     border-radius: 5px;
     margin-right: 10px;
@@ -191,7 +209,7 @@ main {
 .redes_inicio a{
     font-size: 1.5rem;
     margin-right: 20px;
-    color: rgb(10, 10, 10);
+    color: rgb(50, 50, 50);
     transition: .3s ease-in-out;
 }
 .redes_inicio a:hover {
@@ -225,9 +243,9 @@ main {
     flex-wrap: wrap;
 }
 .tecnologias ul li {
-    background-color: rgb(40, 80, 129);
+    background-color: rgb(50, 50, 50);
     margin: 5px;
-    padding: 4px 10px;
+    padding: 5px 10px;
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -253,19 +271,22 @@ main {
     align-items: center;
 }
 .carta_proyecto {
-    background-color: bisque;
-    display: flex;
-    flex-direction: column;
-    position: relative;
+    background-color: rgb(230, 230, 230);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 40px;
     width: 100%;
-    min-width: 200px;
-    max-width: 320px;
-    min-height: 200px;
-    max-height: 320px;
+    min-width: 210px;
+    max-width: 300px;
     margin: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.35);
+}
+.info_proyecto {
+    width: 100%;
+    height: 100%;
     padding: 10px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    grid-row: 1 / 2;
 }
 
 .info_proyecto > hr {
@@ -273,23 +294,160 @@ main {
     border: none;
     width: 100%;
     height: 1px;
-    margin: 5px 0;
+    margin: 8px 0;
 }
 .btn_proyecto {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: burlywood;
+    grid-row: 2 / 3;
+    background-color: rgb(100, 100, 100);
     width: 100%;
-    padding: 10px;
+    padding: 8px;
     text-align: center;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.25rem;
+}
+.demo,
+.codigo {
+    transition: .3s ease-in-out;
+}
+.demo:hover {
+    transform: scale(1.2);
+    color: rgb(0, 180, 35);
+}
+.codigo:hover {
+    transform: scale(1.2);
+    color: rgb(0, 0, 0);
 }
 
 .mas_proyectos {
     width: auto;
-    background-color: bisque;
+    background-color: rgb(40, 80, 130);
     margin: 10px 0;
     padding: 5px 20px;
-    border-radius: 10px;
+    border-radius: 8px;
     text-align: center;
+}
+.t_proyecto {
+    display: flex;
+    align-items: center;
+}
+.t_proyecto i {
+    margin: 10px 10px 0 0;
+    font-size: 1.5rem;
+}
+/********************/
+
+/* CONTACTO */
+.contacto, 
+.cont_contacto {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cont_contacto {
+    background-color: rgb(50, 90, 130);
+    max-width: 400px;
+    height: 250px;
+    border-radius: 5px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.35);
+}
+.cont_contacto > h2 {
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+    color: rgb(230, 230, 230);
+}
+.info_contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 5px;
+}
+.info_contacto i {
+    font-size: 1.2rem;
+    color: rgb(230, 230, 230);
+    margin: 10px;
+}
+.info_contacto a {
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(230, 230, 230);
+}
+.email,
+.tel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* FOOTER */
+footer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 50px 0 0 0;
+    padding: 20px;
+    background-color: rgb(210, 210, 210);
+    border-top: 1px solid rgba(0, 0, 0, 0.25);
+}
+footer a,
+footer i {
+    color: rgb(50, 50, 50);
+    font-weight: 500;
+}
+.logo_redes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.logo_redes > img {
+    width: 100px;
+    margin: 20px 0;
+}
+.redes_footer a {
+    margin: 0 10px;
+}
+.redes_footer i {
+    font-size: 1.5rem;
+}
+
+.cont_footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+.menu_footer li a i {
+    margin: 10px;
+}
+
+.mi_portafolio {
+    width: 100%;
+    padding: 20px 20px 0;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(50, 50, 50, 0.25);
+}
+.mi_portafolio > img {
+    margin: 5px 10px;
+}
+.mi_portafolio > span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(75, 75, 75);
 }
