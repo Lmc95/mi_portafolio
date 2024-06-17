@@ -147,7 +147,7 @@ main {
 
 /* INICIO */
 .foto_perfil {
-    background: linear-gradient(rgb(30, 90, 130, 0.90) 30%, rgba(0, 0, 0, 1) 100%) ;
+    background: linear-gradient(rgb(30, 90, 130, 1) 20%, rgb(241, 241, 241) 100%) ;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     width: 150px;
     display: flex;
